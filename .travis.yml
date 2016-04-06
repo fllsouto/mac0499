@@ -1,9 +1,11 @@
 language: ruby
+sudo: required
 
 rvm:
   - 2.2
 
 install:
+  - sudo apt-get install -y sshpass
   - bundle install
 
 script:
@@ -13,4 +15,4 @@ after_success:
   - tar -czf package.tar.gz _site
   - export SSHPASS=$REDELINUXPASS
   - sshpass -e scp package.tar.gz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/deploy.sh
+  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST sh $DEPLOY_PATH/deploy.sh
