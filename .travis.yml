@@ -1,8 +1,16 @@
 language: ruby
+
 rvm:
   - 2.2
+
 install:
   - bundle install
 
 script:
   - jekyll build
+
+after_success:
+  - tar -czf package.tar.gz _site
+  - export SSHPASS=$REDELINUXPASS
+  - sshpass -e scp package.tar.gz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/deploy.sh
