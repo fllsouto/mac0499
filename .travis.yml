@@ -9,7 +9,7 @@ install:
   - bundle install
 
 script:
-  - jekyll build
+  - sh script/jekyll_build.sh
 
 after_success:
   - tar -czf package.tar.gz _site
