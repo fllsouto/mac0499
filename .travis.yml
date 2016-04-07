@@ -12,7 +12,4 @@ script:
   - sh script/jekyll_build.sh
 
 after_success:
-  - tar -czf package.tar.gz _site
-  - export SSHPASS=$REDELINUXPASS
-  - sshpass -e scp package.tar.gz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST sh $DEPLOY_PATH/deploy.sh
+  - sh script/build2deploy.sh
