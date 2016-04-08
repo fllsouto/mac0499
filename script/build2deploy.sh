@@ -5,5 +5,5 @@ ls
 tar -czf package.tar.gz _site
 ls
 export SSHPASS=$REDELINUXPASS
-sshpass -e scp -v package.tar.gz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-sshpass -e ssh -v $DEPLOY_USER@$DEPLOY_HOST sh $DEPLOY_PATH/deploy.sh
+sshpass -e scp -v package.tar.gz fsouto@linux.ime.usp.br:/home/bcc/fsouto/tcc-test-foo
+sshpass -e ssh -v fsouto@linux.ime.usp.br sh /home/bcc/fsouto/tcc-test-foo/deploy.sh
