@@ -1,15 +1,10 @@
 language: ruby
-sudo: required
 
 rvm:
   - 2.2
 
 install:
-  - sudo apt-get install -y sshpass
   - bundle install
 
 script:
-  - sh script/jekyll_build.sh
-
-after_success:
-  - sh script/build2deploy.sh
+  - jekyll build --config _prod_config.yml
