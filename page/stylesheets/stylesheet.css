@@ -256,15 +256,15 @@ header {
 }
 
 #project_title {
-  margin: 0;
+  margin: 20px 0 0 0;
   color: #fff;
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 700;
 }
 
 #project_tagline {
   color: #fff;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 300;
   background: none;
 }
