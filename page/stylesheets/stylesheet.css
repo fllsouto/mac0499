@@ -239,6 +239,8 @@ Full-Width Styles
   border: none;
 }
 
+
+
 #forkme_banner:hover {
   background-color: #1883ed;
 }
@@ -302,6 +304,10 @@ header {
 
 #footer_wrap {
   background: #212121;
+}
+
+.internal_links{
+  color: #E31E10;
 }
 
 /*******************************************************************************
