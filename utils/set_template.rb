@@ -10,7 +10,7 @@ class TccPage
   def initialize args
     @repo_zip         = args[:repo_zip]
     @monography       = get_raw_and_blob(args[:monography])
-    @source_code      = get_raw_and_blob(args[:source_code])
+    @source_code      = args[:source_code]
     @poster           = get_raw_and_blob(args[:poster])
     @slides           = get_raw_and_blob(args[:slides])
     @subjective_part  = get_raw_and_blob(args[:subjective_part ])
@@ -45,7 +45,7 @@ class TccPage
   def source_code
     get_link(
       "Repositório", 
-      @source_code[:blob]
+      @source_code
     )
   end
 
@@ -107,7 +107,7 @@ end
 
 REPO_ZIP = "https://github.com/fllsouto/mac0499/archive/master.zip"
 MONOGRAPHY = "https://github.com/fllsouto/mac0499/%{type}/master/monography/monography.pdf"
-SOURCE_CODE = "https://github.com/fllsouto/mac0499/%{type}/master/code"
+SOURCE_CODE = "https://github.com/fllsouto/dining_philosophers_actor_model"
 POSTER = "https://github.com/fllsouto/mac0499/%{type}/master/poster_and_slides/poster.pdf"
 SLIDES = "https://github.com/fllsouto/mac0499/%{type}/master/poster_and_slides/slides.pdf"
 SUBJECTIVE_PART = "https://github.com/fllsouto/mac0499/%{type}/master/monography/subjective_part.pdf"
