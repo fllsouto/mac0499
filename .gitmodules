@@ -1,0 +1,3 @@
+[submodule "dining_philosophers_actor_model"]
+	path = dining_philosophers_actor_model
+	url = https://github.com/fllsouto/dining_philosophers_actor_model
