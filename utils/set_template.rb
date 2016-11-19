@@ -108,8 +108,8 @@ end
 REPO_ZIP = "https://github.com/fllsouto/mac0499/archive/master.zip"
 MONOGRAPHY = "https://github.com/fllsouto/mac0499/%{type}/master/monography/monography.pdf"
 SOURCE_CODE = "https://github.com/fllsouto/mac0499/%{type}/master/code"
-POSTER = "https://github.com/fllsouto/mac0499/%{type}/master/poster/poster.pdf"
-SLIDES = "https://github.com/fllsouto/mac0499/%{type}/master/slides/slides.pdf"
+POSTER = "https://github.com/fllsouto/mac0499/%{type}/master/poster_and_slides/poster.pdf"
+SLIDES = "https://github.com/fllsouto/mac0499/%{type}/master/poster_and_slides/slides.pdf"
 SUBJECTIVE_PART = "https://github.com/fllsouto/mac0499/%{type}/master/monography/subjective_part.pdf"
 
 
